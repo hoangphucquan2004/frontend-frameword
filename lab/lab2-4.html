@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Bai 4</title>
+</head>
+
+<body>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Nhập hội thoại
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nhap Hoi Thoai</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Nhập lương tháng 12</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form">
+                                <div class="row" style="text-align: left;">
+                                    <div class="form-group col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Mã nhân viên:</label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Tên nhân viên:</label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align: left;">
+                                    <div class="form-group col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Lương:</label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Cơ sở</label>
+                                            <select class="form-control" name="" id="">
+                                                <option>Hà Nội </option>
+                                                <option>Hồ Chí Minh</option>
+                                                <option>Đà Nẵng</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align: left;">
+                                    <div class="form-group col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Thưởng:</label>
+                                            <input type="number" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Phụ Cấp:</label>
+                                            <input type="number" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align: left;">
+                                    <div class="form-group col-md-12">
+                                        <label for="">Ghi chú</label>
+                                        <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary"> <i class="bi bi-save-fill"></i>
+                                    Lưu</button>
+                                <button type="submit" class="btn btn-warning"> <i class="bi bi-folder-x"></i>
+                                    Hủy</button>
+                            </form>
+                        </div>
+
+
+                        <div class="card-footer text-muted">
+                            Vui lòng nhập thông tin lương cầu thủ
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
