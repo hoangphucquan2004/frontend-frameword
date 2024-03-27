@@ -6,40 +6,27 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
-<body ng-app="myapp">
-    <div class="container">
-        <div ng-controller="myctrl">
-            <div class="form-group">
-                <label for="">Họ tên</label>
-                <input type="text" name="name" id="name" class="form-control" ng-model="name">
-                <label for="">Điểm</label>
-                <input type="number" name="diem" id="diem" class="form-control" ng-model="diem">
-            </div>
-            <button class="btn btn-primary" ng-click="gui()">Gửi</button>
-            <p>{{a}}</p>
-            <p>{{b}}</p>
-        </div>
-        <script>
-            var app = angular.module('myapp', []);
-
-            app.controller('myctrl', function ($scope) {
-                $scope.gui = function () {
-                    var name = parseFn($scope.name);
-                    var diem = parseFn($scope.diem);
-
-                    $scope.a = name;
-                    $scope.b = diem;
-                }
-            });
-        </script>
-    </div>
+<body ng-app="myapp" ng-controller="myctrl">
+    <ul>
+        <li>Họ tên: {{student.fullname}}</li>
+        <li>Ngày sinh: {{student.ngaysinh}}</li>
+        <img src="{{student.photo}}" alt="">
+    </ul>
+    <script>
+        angular.module("myapp", []).controller("myctrl", function ($scope) {
+            $scope.student = {
+                fullname: "Hoàng Phúc Quân",
+                ngaysinh: "18/06/2004",
+                photo: "../lab/img/21210455-hinh-anh-gai-xinh-14.jpg",
+            }
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
