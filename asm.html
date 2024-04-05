@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Member Pages</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="MemberController">
+        <h2>Đăng nhập</h2>
+        <form ng-submit="login()">
+            <input type="text" ng-model="loginData.username" placeholder="Tên đăng nhập" required><br>
+            <input type="password" ng-model="loginData.password" placeholder="Mật khẩu" required><br>
+            <button type="submit">Đăng nhập</button>
+        </form>
+
+        <h2>Đăng ký</h2>
+        <form ng-submit="register()">
+            <input type="text" ng-model="registerData.username" placeholder="Tên đăng nhập" required><br>
+            <input type="password" ng-model="registerData.password" placeholder="Mật khẩu" required><br>
+            <input type="email" ng-model="registerData.email" placeholder="Email" required><br>
+            <button type="submit">Đăng ký</button>
+        </form>
+
+        <h2>Đổi mật khẩu</h2>
+        <form ng-submit="changePassword()">
+            <input type="password" ng-model="changePasswordData.oldPassword" placeholder="Mật khẩu cũ" required><br>
+            <input type="password" ng-model="changePasswordData.newPassword" placeholder="Mật khẩu mới" required><br>
+            <button type="submit">Đổi mật khẩu</button>
+        </form>
+
+        <h2>Quên mật khẩu</h2>
+        <form ng-submit="forgotPassword()">
+            <input type="text" ng-model="forgotPasswordData.username" placeholder="Tên đăng nhập" required><br>
+            <input type="email" ng-model="forgotPasswordData.email" placeholder="Email" required><br>
+            <button type="submit">Quên mật khẩu</button>
+        </form>
+
+        <h2>Sửa đổi thông tin tài khoản</h2>
+        <form ng-submit="updateProfile()">
+            <input type="text" ng-model="userData.username" placeholder="Tên đăng nhập" required><br>
+            <input type="password" ng-model="userData.password" placeholder="Mật khẩu" required><br>
+            <input type="email" ng-model="userData.email" placeholder="Email" required><br>
+            <button type="submit">Cập nhật thông tin</button>
+        </form>
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('MemberController', function ($scope) {
+                // Giả định dữ liệu sinh viên được lưu trong file Students.js
+                $scope.students = [
+                    { username: 'student1', password: 'pass1', email: 'student1@example.com' },
+                    { username: 'student2', password: 'pass2', email: 'student2@example.com' },
+                    // Thêm các sinh viên khác nếu cần
+                ];
+
+                $scope.loginData = {};
+                $scope.registerData = {};
+                $scope.changePasswordData = {};
+                $scope.forgotPasswordData = {};
+                $scope.userData = {};
+
+                $scope.login = function () {
+                    // Kiểm tra xem tài khoản đăng nhập có trong danh sách sinh viên hay không
+                    // Xử lý thông tin đăng nhập ở đây
+                };
+
+                $scope.register = function () {
+                    // Thêm tài khoản mới vào danh sách sinh viên
+                };
+
+                $scope.changePassword = function () {
+                    // Cập nhật mật khẩu cho tài khoản hiện tại
+                };
+
+                $scope.forgotPassword = function () {
+                    // Hiển thị mật khẩu nếu nhập đúng mã và email
+                };
+
+                $scope.updateProfile = function () {
+                    // Cập nhật thông tin tài khoản cho tài khoản hiện tại
+                };
+            });
+    </script>
+
+</body>
+
+</html>
