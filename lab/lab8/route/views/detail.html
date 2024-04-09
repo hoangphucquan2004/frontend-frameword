@@ -1,0 +1,36 @@
+<h1 class="text-center ">Sửa thông tin sách</h1>
+<form ng-submit="updateBook()">
+    <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input type="text" class="form-control " id="id" ng-model="book.id" disabled>
+
+    </div>
+    <div class="mb-3">
+        <label for="ma_sach" class="form-label">Mã sách</label>
+        <input type="text" class="form-control " id="ma_sach" ng-model="book.maSach" disabled>
+
+    </div>
+    <div class="mb-3">
+        <label for="ten_sach" class="form-label">Tên sách</label>
+        <input type="text" class="form-control " id="ten_sach" ng-model="book.tenSach" disabled>
+
+    </div>
+    <div class="mb-3">
+        <label for="loai_sach" class="form-label">ID</label>
+        <input type="text" class="form-control " id="loai_sach" ng-model="book.loaiSach" disabled>
+
+    </div>
+    <div class="mb-3">
+        <label for="gia_sach" class="form-label">Giá sách</label>
+        <input type="text" class="form-control " id="gia_sach" ng-model="book.giaSach" disabled>
+
+    </div>
+    <div class="mb-3">
+        <label for="so_luong" class="form-label">Số lượng</label>
+        <input type="text" class="form-control " id="so_luong" ng-model="book.soLuong" disabled>
+
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success ">Xác nhận</button>
+    </div>
+</form>

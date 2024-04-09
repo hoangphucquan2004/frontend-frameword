@@ -1,0 +1,28 @@
+{
+  "listBook": [
+    {
+      "id": "1",
+      "maSach": "V1",
+      "tenSach": "Bài học cuộc sống",
+      "loaiSach": "Văn học",
+      "giaSach": "30000",
+      "soLuong": 8
+    },
+    {
+      "id": "2",
+      "maSach": "T1",
+      "tenSach": "Tuyển tập đề thi",
+      "loaiSach": "Toán học",
+      "giaSach": "45000",
+      "soLuong": 10
+    },
+    {
+      "id": "4",
+      "maSach": "D3",
+      "tenSach": "Hello World",
+      "loaiSach": "Ngoại ngữ",
+      "giaSach": "350000",
+      "soLuong": "4"
+    }
+  ]
+}
